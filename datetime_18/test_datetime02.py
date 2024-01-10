@@ -62,6 +62,7 @@ for contract in contracts_list:
         install_pay_each = solve_install_pay_each(contract_total_payment, deposit_value, installments_count)
         installment_date = contract_start_date
         sheet_serial = 1
+        
         for i in range(int(installments_count)):
             max_grace_date = solve_working_days(installment_date, max_grace_period)
             writer.writerow([sheet_serial, installment_date.date(),
